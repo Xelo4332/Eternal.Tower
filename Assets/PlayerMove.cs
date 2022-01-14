@@ -6,10 +6,10 @@ public class PlayerMove : MonoBehaviour
 {
     [SerializeField]
     private float speed = 5f;
-    [SerializeField]
-    private float jumpforce = 400;
-    [SerializeField]
+    
+   
     private Rigidbody2D rb;
+    private BoxCollider2D boxCollider2d;
 
    
 
@@ -18,7 +18,8 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = transform.GetComponent<Rigidbody2D>();
+        boxCollider2d = transform.GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -32,10 +33,17 @@ public class PlayerMove : MonoBehaviour
         {
             transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.W)) 
+        if (IsGrounded() && Input.GetKeyDown(KeyCode.W)) 
         {
-            rb.AddForce(transform.up*jumpforce) ;
+            
+            float jumpforce = 15f;
+            rb.velocity = Vector2.up * jumpforce; 
 
         }
+    }private bool IsGrounded()
+    {
+        RaycastHit2D raycasthit2d = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down * 1f);
+        Debug.Log(raycasthit2d.collider);
+        return raycasthit2d.collider != null;
     }
 }
