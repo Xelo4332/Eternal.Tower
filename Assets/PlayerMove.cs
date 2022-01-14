@@ -28,20 +28,20 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += new Vector3(speed, 0, 0)* Time.deltaTime;
+            transform.position += new Vector3(speed, 0, 0)* Time.deltaTime;// These "If" codes make so that you move the diraction u press the button of
         }
         if (Input.GetKey(KeyCode.A))
         {
             transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
         }
-        if (IsGrounded() && Input.GetKeyDown(KeyCode.W)) 
+        if (IsGrounded() && Input.GetKeyDown(KeyCode.W)) // This code adds force upwards to the player making it jump
         {
             
             float jumpforce = 15f;
             rb.velocity = Vector2.up * jumpforce; 
 
         }
-    }private bool IsGrounded()
+    }private bool IsGrounded() // this code makes a boxcast thats checks if the player is touching the ground so that u can only jump on the ground
     {
         RaycastHit2D raycasthit2d = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down,  .1f, platformslayermask);
         Debug.Log(raycasthit2d.collider);
