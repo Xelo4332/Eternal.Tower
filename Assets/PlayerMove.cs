@@ -6,7 +6,8 @@ public class PlayerMove : MonoBehaviour
 {
     [SerializeField]
     private float speed = 5f;
-    
+   [SerializeField]
+    private LayerMask platformslayermask ;
    
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider2d;
@@ -42,7 +43,7 @@ public class PlayerMove : MonoBehaviour
         }
     }private bool IsGrounded()
     {
-        RaycastHit2D raycasthit2d = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down * 1f);
+        RaycastHit2D raycasthit2d = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down,  .1f, platformslayermask);
         Debug.Log(raycasthit2d.collider);
         return raycasthit2d.collider != null;
     }

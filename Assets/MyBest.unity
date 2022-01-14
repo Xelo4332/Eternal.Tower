@@ -232,8 +232,8 @@ GameObject:
   - component: {fileID: 1911518530}
   - component: {fileID: 1911518529}
   - component: {fileID: 1911518528}
-  m_Layer: 0
-  m_Name: Square
+  m_Layer: 6
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -484,7 +484,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &2026038226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,3 +498,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  platformslayermask:
+    serializedVersion: 2
+    m_Bits: 64
