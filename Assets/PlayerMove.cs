@@ -7,7 +7,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private float speed = 5f;
     [SerializeField]
-    private float jumpforce = 500;
+    private float jumpforce = 400;
     [SerializeField]
     private Rigidbody2D rb;
 
