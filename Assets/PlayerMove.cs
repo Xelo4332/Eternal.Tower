@@ -17,8 +17,10 @@ public class PlayerMove : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public int attackDamage = 40;
-    public Transform attackPos;
     private float timer;
+    private bool parry;
+    [SerializeField] private GameObject parryBox;
+    private float parryWindow = 0.5f;
 
 
 
@@ -27,12 +29,13 @@ public class PlayerMove : MonoBehaviour
     {
         rb = transform.GetComponent<Rigidbody2D>();
         boxCollider2d = transform.GetComponent<BoxCollider2D>();
-        
+        parryBox.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         timer += Time.deltaTime;
         if (Input.GetKey(KeyCode.D))
         {
@@ -56,6 +59,17 @@ public class PlayerMove : MonoBehaviour
             Attack();
             timer = 0;
         }
+        if (Input.GetKey(KeyCode.K)&& !parry)
+        {
+            parryBox.SetActive(true);
+                parry= true;
+            Invoke("ParryStop", parryWindow);
+        }
+    }
+    void ParryStop()
+    {
+        parryBox.SetActive(false);
+        parry = false;
     }
     void Attack()
     {
