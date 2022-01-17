@@ -19,14 +19,9 @@ public class MeleeEnemy : MonoBehaviour
     //References
     private Animator anim;
     private Health playerHealth;
-    private EnemyPatrol enemyPatrol;
+   
 
-    private void Awake()
-    {
-        anim = GetComponent<Animator>();
-        enemyPatrol = GetComponentInParent<EnemyPatrol>();
-    }
-
+  
     private void Update()
     {
         cooldownTimer += Time.deltaTime;
@@ -41,8 +36,7 @@ public class MeleeEnemy : MonoBehaviour
             }
         }
 
-        if (enemyPatrol != null)
-            enemyPatrol.enabled = !PlayerInSight();
+       
     }
 
     private bool PlayerInSight()
