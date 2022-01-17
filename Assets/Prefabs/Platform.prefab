@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 7746620427255081703}
   - component: {fileID: 7746620427255081700}
   - component: {fileID: 7746620427255081701}
-  - component: {fileID: -8866220441231758122}
   m_Layer: 6
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,27 +132,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &-8866220441231758122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7746620427255081626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aedcb95c7563bea4dbd4025fcaa7d590, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platformslayermask:
-    serializedVersion: 2
-    m_Bits: 0
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  speed: 5
-  attackPoint: {fileID: 0}
-  attackRange: 0.5
-  attackDamage: 1
-  parryBox: {fileID: 0}
-  maxhealth: 3

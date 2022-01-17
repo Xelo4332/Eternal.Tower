@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- /*
+ 
 public class PlayerMove : MonoBehaviour
     
 {
@@ -98,4 +98,3 @@ private bool IsGrounded() // this code makes a boxcast thats checks if the playe
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
-*/
