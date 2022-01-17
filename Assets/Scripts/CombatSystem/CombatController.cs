@@ -22,6 +22,7 @@ public class CombatController : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
            EnemyAttack?.Invoke(_attackDamage); //Send Event
+           enemy.GetComponent<Health>().TakeDamage(_attackDamage);
         }
        
     }

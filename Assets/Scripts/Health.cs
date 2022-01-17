@@ -4,21 +4,30 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int playerMaxHealth = 3;
-    int currentHealth;
-    // Start is called before the first frame update
-    void Start()
-    {
-        currentHealth = playerMaxHealth;  
-    }
-    public void TakeDamage(int damage)
-    {
+ 
+    [SerializeField] private float startingHealth;
+    public float currentHealth { get; private set; }
+    private bool dead;
 
-    }
-
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        currentHealth = startingHealth;
     }
+    public void TakeDamage(float _damage)
+    {
+        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+
+        if (currentHealth > 0)
+        {
+             //hit animation
+         
+        }
+        else
+        {
+           //death animation and game over
+           
+        }
+    }
+ 
+
 }
