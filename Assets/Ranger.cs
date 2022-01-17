@@ -1,4 +1,5 @@
 using System.Collections;
+/*
 public class Ranger : MonoBehaviour
 {
     [Header("Attack Parameters")]
@@ -78,3 +79,4 @@ public class Ranger : MonoBehaviour
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 }
+*/

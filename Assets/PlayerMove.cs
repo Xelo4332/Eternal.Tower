@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+ /*
 public class PlayerMove : MonoBehaviour
+    
 {
     
    
@@ -24,7 +25,7 @@ public class PlayerMove : MonoBehaviour
    
 
 
-    void Start()
+     private void Start()
     {
         rb = transform.GetComponent<Rigidbody2D>();
         boxCollider2d = transform.GetComponent<BoxCollider2D>();
@@ -97,3 +98,4 @@ private bool IsGrounded() // this code makes a boxcast thats checks if the playe
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
+*/

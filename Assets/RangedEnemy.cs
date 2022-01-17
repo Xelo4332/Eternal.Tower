@@ -1,5 +1,5 @@
 using UnityEngine;
-
+/*
 public class RangedEnemy : MonoBehaviour
 {
     // Parameters for shit
@@ -83,3 +83,4 @@ public class RangedEnemy : MonoBehaviour
 
 
 }
+*/
