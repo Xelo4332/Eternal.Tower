@@ -21,8 +21,7 @@ public class PlayerMove : MonoBehaviour
     private bool parry;
     [SerializeField] private GameObject parryBox;
     private float parryWindow = 0.5f;
-    public int maxhealth = 3;
-    int currenthealth;
+   
 
 
     void Start()
@@ -30,8 +29,9 @@ public class PlayerMove : MonoBehaviour
         rb = transform.GetComponent<Rigidbody2D>();
         boxCollider2d = transform.GetComponent<BoxCollider2D>();
         parryBox.SetActive(false);
-        currenthealth = maxhealth;
+        
     }
+
 
     void Update()
     {
