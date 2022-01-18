@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
- 
+
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
     private bool dead;
@@ -19,15 +19,22 @@ public class Health : MonoBehaviour
 
         if (currentHealth > 0)
         {
-             //hit animation
-         
+            //hit animation
+
         }
         else
         {
-           //death animation and game over
-           
+            //death animation and game over
+
         }
     }
- 
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            TakeDamage(1);
+        }
+    }
 
 }
