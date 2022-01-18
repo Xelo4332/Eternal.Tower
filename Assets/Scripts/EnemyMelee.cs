@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMeele : MonoBehaviour
+public class EnemyMelee : MonoBehaviour
 {
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
@@ -12,7 +12,14 @@ public class EnemyMeele : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     private float coldownTimer = Mathf.Infinity;
 
+    private Animator anim;
+
     private Health playerHealth;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -20,10 +27,11 @@ public class EnemyMeele : MonoBehaviour
 
         if (PlayerInSight())
         {
-            // Att fiende förstår när ska den slå våran karaktär
+            // Att fiende fï¿½rstï¿½r nï¿½r ska den slï¿½ vï¿½ran karaktï¿½r
             if (coldownTimer >= attackCooldown)
             {
                 coldownTimer = 0;
+                anim.SetTrigger("MeleeAttack");
 
             }
         }
@@ -63,9 +71,5 @@ public class EnemyMeele : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        DamagePlayer();
-    }
 }
 
