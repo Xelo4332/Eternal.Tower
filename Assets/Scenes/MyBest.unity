@@ -625,7 +625,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1765849745
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1068,7 +1068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   _attackPoint: {fileID: 111609951}
   _attackRange: 0.5
   _attackDamage: 1

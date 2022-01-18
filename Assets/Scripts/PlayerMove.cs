@@ -98,3 +98,4 @@ private bool IsGrounded() // this code makes a boxcast thats checks if the playe
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
+   
