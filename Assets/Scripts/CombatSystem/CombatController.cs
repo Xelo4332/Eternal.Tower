@@ -17,7 +17,7 @@ public class CombatController : MonoBehaviour
     private Coroutine _parryRoutine;
     public void Attack()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayer); // Looks if the enemy is in the empty circle and gives it damage-KK
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayer); //  Makes a empty circle and dameges all things with the layer "enemyLayer"-KK
 
         foreach (Collider2D enemy in hitEnemies)
         {

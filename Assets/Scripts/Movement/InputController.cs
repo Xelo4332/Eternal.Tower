@@ -29,7 +29,14 @@ public class InputController : MonoBehaviour
         {
             _combatController.Parry();
         }
-
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 180, transform.rotation.z);
+        }
     }
 
     
