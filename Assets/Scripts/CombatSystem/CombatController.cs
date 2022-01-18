@@ -56,4 +56,10 @@ public class CombatController : MonoBehaviour
         
 
     }
+    private void OnDrawGizmosSelected()// shows the empty circle that is the attack range-KK
+    {
+        if (_attackPoint == null)
+            return;
+        Gizmos.DrawWireSphere(_attackPoint.position, _attackRange);
+    }
 }
