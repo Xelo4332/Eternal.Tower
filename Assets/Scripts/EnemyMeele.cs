@@ -17,12 +17,13 @@ public class EnemyMeele : MonoBehaviour
     private void Update()
     {
         coldownTimer += Time.deltaTime;
+
         if (PlayerInSight())
         {
             // Att fiende förstår när ska den slå våran karaktär
             if (coldownTimer >= attackCooldown)
-
             {
+                coldownTimer = 0;
 
             }
         }
@@ -31,15 +32,13 @@ public class EnemyMeele : MonoBehaviour
 
     private bool PlayerInSight()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-        new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
-        0, Vector2.left, 0, playerLayer);
+        RaycastHit2D hit =
+            Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
+            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
+            0, Vector2.left, 0, playerLayer);
 
-
-        if(hit.collider != null)
-        {
+        if (hit.collider != null)
             playerHealth = hit.transform.GetComponent<Health>();
-        }
 
         return hit.collider != null;
     }
@@ -54,12 +53,19 @@ public class EnemyMeele : MonoBehaviour
 
     private void DamagePlayer()
     {
+
+        
         if (PlayerInSight())
         {
+            print("Hej");
             playerHealth.TakeDamage(damage);
         }
 
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        DamagePlayer();
+    }
 }
 
