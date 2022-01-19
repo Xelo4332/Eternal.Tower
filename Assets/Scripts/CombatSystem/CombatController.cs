@@ -24,7 +24,8 @@ public class CombatController : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyAttack?.Invoke(_attackDamage); //Send Event
-            enemy.GetComponent<Health>().TakeDamage(_attackDamage);
+            enemy.GetComponent<EnemyHealth>().TakeDamage(_attackDamage);
+            print("hejdå");
         }
 
     }
@@ -37,9 +38,6 @@ public class CombatController : MonoBehaviour
         yield return new WaitForSeconds(50);
         Physics2D.IgnoreLayerCollision(10, 11, false);
         isParry = false;
-
-
-
 
 
 
