@@ -11,9 +11,12 @@ public class EnemyHealth : MonoBehaviour
     public float currentHealth { get; private set; }
     private bool dead;
 
+    private Animator anim;
+
     private void Awake()
     {
         currentHealth = startingHealth;
+        anim = GetComponent<Animator>();
     }
     public void TakeDamage(float _damage)
     {
@@ -23,12 +26,27 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHealth > 0)
         {
+            anim.SetTrigger("hurt");
 
 
         }
         else
         {
-            //death animation and game over
+           if (!dead)
+           {
+               anim.SetTrigger("die");
+               if (GetComponent<EnemyPatrolling>() != null)
+               {
+                   GetComponent<EnemyPatrolling>().enabled = false;
+               }
+               
+               if (GetComponent<EnemyMelee>() != null);
+               {
+                   GetComponent<EnemyMelee>().enabled = false;
+               }
+               dead = true;
+           }
+            
 
         }
 

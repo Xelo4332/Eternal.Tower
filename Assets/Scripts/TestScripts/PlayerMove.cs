@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
     
 {
-    
+    /*
    
     public LayerMask platformslayermask ;
     public LayerMask enemyLayers;
@@ -97,5 +97,6 @@ private bool IsGrounded() // this code makes a boxcast thats checks if the playe
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+    */
 }
    
