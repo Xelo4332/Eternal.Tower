@@ -9,6 +9,12 @@ public class InputController : MonoBehaviour
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private CombatController _combatController;
     private float _horizontal;
+    private Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -23,6 +29,7 @@ public class InputController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _combatController.Attack();
+            anim.SetTrigger("MeleeAttack");
 
         }
         if (Input.GetKeyDown(KeyCode.D))

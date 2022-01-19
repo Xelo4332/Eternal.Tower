@@ -25,7 +25,7 @@ public class CombatController : MonoBehaviour
         {
             EnemyAttack?.Invoke(_attackDamage); //Send Event
             enemy.GetComponent<EnemyHealth>().TakeDamage(_attackDamage);
-            print("hejdå");
+            print("hejdï¿½");
         }
 
     }
