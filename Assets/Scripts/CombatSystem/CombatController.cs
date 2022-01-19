@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class CombatController : MonoBehaviour
 {
-    public event  System.Action<int> EnemyAttack;
+    public bool isParry = false;
+
+    public event System.Action<int> EnemyAttack;
 
     [SerializeField] private LayerMask _enemyLayer;
     [SerializeField] private Transform _attackPoint;
     [SerializeField] private float _attackRange = 0.5f;
     [SerializeField] private int _attackDamage = 1;
-    
+
 
     [SerializeField] private BoxCollider2D _hitBox;
     [SerializeField] private SpriteRenderer _spriteRenderer;
@@ -21,45 +23,40 @@ public class CombatController : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-           EnemyAttack?.Invoke(_attackDamage); //Send Event
-           enemy.GetComponent<Health>().TakeDamage(_attackDamage);
+            EnemyAttack?.Invoke(_attackDamage); //Send Event
+            enemy.GetComponent<Health>().TakeDamage(_attackDamage);
         }
-       
+
     }
 
-    public void Parry()
+    private IEnumerator Parry()
     {
-        if(_parryRoutine == null)
+        isParry = true;
+        Physics2D.IgnoreLayerCollision(10, 11, true);
+
+        yield return new WaitForSeconds(50);
+        Physics2D.IgnoreLayerCollision(10, 11, false);
+        isParry = false;
+
+
+
+
+
+
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
         {
-            _parryRoutine = StartCoroutine(ParryRoutine());
+            StartCoroutine(Parry());
         }
-
     }
-    private IEnumerator ParryRoutine()
-    {
-        _hitBox.enabled = false;
-        _spriteRenderer.enabled = false;
 
-        yield return new WaitForSeconds(0.5f);
-
-        _hitBox.enabled = true;
-        _spriteRenderer.enabled = true;
-        
-        yield return new WaitForSeconds(0.5f);
-
-        if(_parryRoutine != null)
+        private void OnDrawGizmosSelected()// shows the empty circle that is the attack range-KK
         {
-            _parryRoutine = null;
+            if (_attackPoint == null)
+                return;
+            Gizmos.DrawWireSphere(_attackPoint.position, _attackRange);
         }
-
-
-        
-
     }
-    private void OnDrawGizmosSelected()// shows the empty circle that is the attack range-KK
-    {
-        if (_attackPoint == null)
-            return;
-        Gizmos.DrawWireSphere(_attackPoint.position, _attackRange);
-    }
-}

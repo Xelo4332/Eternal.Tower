@@ -15,28 +15,34 @@ public class Health : MonoBehaviour
     [SerializeField] private float iFramesDuration;
     [SerializeField] private int numberOfFlashes;
     private SpriteRenderer spriteRend;
+    CombatController controller;
     
     private void Awake()
     {
+        controller = GetComponent<CombatController>();
         currentHealth = startingHealth;
 
         spriteRend = GetComponent<SpriteRenderer>();
     }
     public void TakeDamage(float _damage)
     {
-        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
-
-        if (currentHealth > 0)
+        if (controller.isParry == false)
         {
-            //hit animation
-            StartCoroutine(Invunerability());
+            currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
 
-        }
-        else
-        {
-            //death animation and game over
+            if (currentHealth > 0)
+            {
+                //hit animation
+                StartCoroutine(Invunerability());
 
+            }
+            else
+            {
+                //death animation and game over
+
+            }
         }
+        
     }
 
     private void Update()
