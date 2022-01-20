@@ -36,11 +36,10 @@ public class Health : MonoBehaviour
                 //hit animation
                 StartCoroutine(Invunerability());
 
-
             }
             else 
             {
-                if(!dead)
+                if (!dead)
                 {
                     SceneManager.LoadScene("GameOver");
                 }

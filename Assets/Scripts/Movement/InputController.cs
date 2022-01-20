@@ -14,6 +14,7 @@ public class InputController : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
+        AudioSource source = gameObject.GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -30,6 +31,9 @@ public class InputController : MonoBehaviour
         {
             _combatController.Attack();
             anim.SetTrigger("MeleeAttack");
+            AudioSource source = gameObject.GetComponent<AudioSource>();
+            source.Play();
+
 
         }
         if (Input.GetKeyDown(KeyCode.D))

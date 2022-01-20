@@ -17,6 +17,12 @@ public class CombatController : MonoBehaviour
     [SerializeField] private BoxCollider2D _hitBox;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     private Coroutine _parryRoutine;
+    private Animator anim;
+
+    private void Start()
+    {
+       anim = GetComponent<Animator>();
+    }
     public void Attack()
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayer); //  Makes a empty circle and dameges all things with the layer "enemyLayer"-KK
@@ -34,12 +40,16 @@ public class CombatController : MonoBehaviour
     {
         isParry = true;
         Physics2D.IgnoreLayerCollision(10, 11, true);
-
+        anim.SetTrigger("isParry");
+        AudioSource source = gameObject.GetComponent<AudioSource>();
+        source.Play();
+        GetComponent<PlayerMovement>().enabled = false;
         yield return new WaitForSeconds(1);
         Physics2D.IgnoreLayerCollision(10, 11, false);
         isParry = false;
-
+        GetComponent<PlayerMovement>().enabled = true;
         yield return new WaitForSeconds(3);
+       
 
 
 
