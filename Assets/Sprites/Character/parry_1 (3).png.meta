@@ -212,7 +212,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 33
-        y: 33
+        y: 34
         width: 32
         height: 28
       alignment: 0
@@ -229,32 +229,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: parry_1 (3)_5
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 59
-        width: 5
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c2fde1a6669dd420800000000000000
-      internalID: 2656444722766017225
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: parry_1 (3)_6
       rect:
         serializedVersion: 2
         x: 65
-        y: 33
+        y: 34
         width: 31
         height: 28
       alignment: 0
@@ -271,55 +250,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: parry_1 (3)_7
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 49
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82a0e938fc352d0a0800000000000000
-      internalID: -6858327131800335832
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: parry_1 (3)_8
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 42
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69d652ece9713cdc0800000000000000
-      internalID: -3620023704644915818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: parry_1 (3)_9
       rect:
         serializedVersion: 2
         x: 3
         y: 2
         width: 32
-        height: 27
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,7 +277,7 @@ TextureImporter:
         x: 35
         y: 2
         width: 32
-        height: 27
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
