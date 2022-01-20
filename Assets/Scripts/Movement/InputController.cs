@@ -8,13 +8,14 @@ public class InputController : MonoBehaviour
 
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private CombatController _combatController;
+    [SerializeField] private AudioClip meleeAttackSound;
     private float _horizontal;
     private Animator anim;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
-        AudioSource source = gameObject.GetComponent<AudioSource>();
+        
     }
 
     private void Update()
@@ -31,8 +32,7 @@ public class InputController : MonoBehaviour
         {
             _combatController.Attack();
             anim.SetTrigger("MeleeAttack");
-            AudioSource source = gameObject.GetComponent<AudioSource>();
-            source.Play();
+            SoundManager.instance.PlaySound(meleeAttackSound);
 
 
         }
