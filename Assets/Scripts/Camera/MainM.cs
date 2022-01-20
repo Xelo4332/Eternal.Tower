@@ -9,5 +9,13 @@ public class MainM : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
     }
-          
+    
+    public void Instruct ()
+    {
+        SceneManager.LoadScene("Instruct");
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
