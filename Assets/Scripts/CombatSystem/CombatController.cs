@@ -35,9 +35,11 @@ public class CombatController : MonoBehaviour
         isParry = true;
         Physics2D.IgnoreLayerCollision(10, 11, true);
 
-        yield return new WaitForSeconds(50);
+        yield return new WaitForSeconds(1);
         Physics2D.IgnoreLayerCollision(10, 11, false);
         isParry = false;
+
+        yield return new WaitForSeconds(3);
 
 
 
