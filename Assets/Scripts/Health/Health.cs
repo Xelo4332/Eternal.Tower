@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -36,9 +37,13 @@ public class Health : MonoBehaviour
                 StartCoroutine(Invunerability());
 
             }
-            else
+            else 
             {
-                //death animation and game over
+                if(!dead)
+                {
+                    SceneManager.LoadScene("GameOver");
+                }
+
 
             }
         }
