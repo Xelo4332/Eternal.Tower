@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,12 +13,14 @@ public class CombatController : MonoBehaviour
     [SerializeField] private Transform _attackPoint;
     [SerializeField] private float _attackRange = 0.5f;
     [SerializeField] private int _attackDamage = 1;
+   
 
 
     [SerializeField] private BoxCollider2D _hitBox;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     private Coroutine _parryRoutine;
     private Animator anim;
+    
 
     private void Start()
     {
@@ -31,6 +34,7 @@ public class CombatController : MonoBehaviour
         {
             EnemyAttack?.Invoke(_attackDamage); //Send Event
             enemy.GetComponent<EnemyHealth>().TakeDamage(_attackDamage);
+
             print("hejd�");
         }
 
@@ -41,8 +45,6 @@ public class CombatController : MonoBehaviour
         isParry = true;
         Physics2D.IgnoreLayerCollision(10, 11, true);
         anim.SetTrigger("isParry");
-        AudioSource source = gameObject.GetComponent<AudioSource>();
-        source.Play();
         GetComponent<PlayerMovement>().enabled = false;
         yield return new WaitForSeconds(1);
         Physics2D.IgnoreLayerCollision(10, 11, false);
@@ -70,3 +72,7 @@ public class CombatController : MonoBehaviour
             Gizmos.DrawWireSphere(_attackPoint.position, _attackRange);
         }
     }
+
+internal class SerealizeFieldAttribute : Attribute
+{
+}
