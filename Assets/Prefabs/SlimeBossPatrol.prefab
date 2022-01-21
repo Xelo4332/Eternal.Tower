@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2070159188505774619}
   - component: {fileID: 2070159188505774618}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SlimeBossPatrol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,10 +246,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b55af8c17503304faa86979ba14a22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 3
+  startingHealth: 10
   components:
   - {fileID: 2070159188505774618}
   - {fileID: 2070159188545458201}
+  - {fileID: 2070159188545458202}
   enemyHit: {fileID: 8300000, guid: 1370715e849cfad4db00ecc181e53fa4, type: 3}
   enemyDeath: {fileID: 8300000, guid: e2637e2d8f8c2a44caefd48a022fcc2e, type: 3}
 --- !u!1 &2070159189016032995
