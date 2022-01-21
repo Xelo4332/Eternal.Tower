@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EASTER : MonoBehaviour
 {
+    //Changing scene Julian
     public void ChangeScene()
     {
         SceneManager.LoadScene("EASTEREGG");

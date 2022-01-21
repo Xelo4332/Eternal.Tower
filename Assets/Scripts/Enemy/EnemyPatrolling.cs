@@ -4,28 +4,34 @@ using UnityEngine;
 
 public class EnemyPatrolling : MonoBehaviour
 {
+    //Hela Koden skrev Kacper
     
+    //Skapar en field där man kan lägga in Left och right
     [Header("Patrol Points")]
     [SerializeField] private Transform leftEdge;
     [SerializeField] private Transform rightEdge;
 
+    //Field för att lägga in enemy så unity förstår vem ska röra sig
     [Header("Enemy")]
     [SerializeField] private Transform enemy;
 
+    //Alla de är för movement. Att enemy skulle kunna vända sig
     [Header("Movment Parameters")]
     [SerializeField] private float speed;
     private Vector3 initScale;
     private bool movingLeft;
 
+    //Field för hur mycket kommer vara idle som kan ändras
     [Header("Idle Behaviour")]
     [SerializeField] private float idleDuration;
     private float idleTimer;
 
+    //Field för att kunna lägga in enemy animator controler så att enemy har animator har tillgång till enemy animations
     [Header("Enemy Animator")]
     [SerializeField]private Animator anim;
 
 
-
+    //Att enemy facar rätt direction när spelet startas
     private void Awake()
     {
         initScale = enemy.localScale;

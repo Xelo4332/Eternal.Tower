@@ -9,14 +9,16 @@ public class EnemyHealth : MonoBehaviour
     //Field to write enemy starting health
     [SerializeField] private float startingHealth;
 
-    //How much is current health and it's private set so only some scripts can acess it
+    //How much is current health and it's private set so only some scripts can acess it 
     
+    //Denna variablar är för kunna kolla Hur mycket har player health under spelet och har bool död att kunna kolla om player eller enemy är död
     public float currentHealth { get; private set; }
     private bool dead;
 
     [Header ("Animations")]
     private Animator anim;
 
+    //Två audioclippar och Bevhiour så att kunna stänga alla componenets när spelet är slut
     [Header("Components")]
     [SerializeField] private Behaviour[] components;
     [SerializeField] private AudioClip enemyHit;

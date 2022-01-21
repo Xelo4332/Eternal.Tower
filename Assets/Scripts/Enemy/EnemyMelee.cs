@@ -11,22 +11,22 @@ public class EnemyMelee : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
-
-
     private float coldownTimer = Mathf.Infinity;
 
     private Animator anim;
+    //We create a variabel för our Health
     private Health playerHealth;
 
     private EnemyPatrolling enemyPatrol;
 
+    //Get componenet  Animator and EnemyPatrolling Deni
     private void Awake()
     {
         anim = GetComponent<Animator>();
         enemyPatrol = GetComponentInParent<EnemyPatrolling>();
     }
 
-    //Med
+    //Plussar ihop ColdownTimer med deltaima Martin
     private void Update()
     {
         coldownTimer += Time.deltaTime;
@@ -42,6 +42,7 @@ public class EnemyMelee : MonoBehaviour
             }
         }
         
+        //Om Enemy Patrol är lika med Null då aktiveras PlayerInSight methoden Martin
         if(enemyPatrol != null)
         {
             enemyPatrol.enabled = !PlayerInSight();
@@ -63,7 +64,7 @@ public class EnemyMelee : MonoBehaviour
         return hit.collider != null;
     }
 
-    //Draws a gizmo to show where's Enemy Collider hitting point
+    //Draws a gizmo to show where's Enemy Collider hitting point Julian
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

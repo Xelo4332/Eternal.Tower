@@ -25,7 +25,7 @@ public class CombatController : MonoBehaviour
     private Coroutine _parryRoutine;
     private Animator anim;
 
-
+    //Gets Animator component so we can use animator
     private void Start()
     {
         anim = GetComponent<Animator>();

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 //Denna script är exact samma som Enemyhealth men skillnaden är att det är för player
+//Men skillanden är att det finns Parry och andra små detaljer
 public class Health : MonoBehaviour
 {
     [Header ("Health")]
@@ -18,7 +19,7 @@ public class Health : MonoBehaviour
     [SerializeField] private int numberOfFlashes;
     private SpriteRenderer spriteRend;
     CombatController controller;
-    
+
     private void Awake()
     {
         controller = GetComponent<CombatController>();
@@ -26,6 +27,7 @@ public class Health : MonoBehaviour
 
         spriteRend = GetComponent<SpriteRenderer>();
     }
+    //Om parry = falkst då kommer player ta damage Deni
     public void TakeDamage(float _damage)
     {
         if (controller.isParry == false)
@@ -59,6 +61,7 @@ public class Health : MonoBehaviour
         }
     }
 
+    //Bytter ut färger på player till rött i några sekunder Martin
     private IEnumerator Invunerability()
     {
         

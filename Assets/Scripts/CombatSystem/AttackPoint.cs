@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AttackPoint : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
 
-
+    //Dubbel check att player vänder sig kacper
     // Update is called once per frame
     void Update()
     {

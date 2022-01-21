@@ -18,6 +18,7 @@ public class InputController : MonoBehaviour
         
     }
 
+    //Det är för alla keybinds för movement, attack, parry och jump och några animationer ligger här
     private void Update()
     {
         _horizontal = Input.GetAxis("Horizontal");
@@ -36,6 +37,7 @@ public class InputController : MonoBehaviour
 
 
         }
+        //Rotarar våran karaktär Kacper
         if (Input.GetKeyDown(KeyCode.D))
         {
             transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
