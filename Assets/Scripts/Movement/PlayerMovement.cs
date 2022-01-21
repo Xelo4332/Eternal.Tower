@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
    [SerializeField] private float _jumpForce;
    private Animator anim;
    private SpriteRenderer _spriteRenderer;
-   [SerializeField] private AudioClip walkingSound;
+ 
 
 
     private bool _isGround;
@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
    public void Move(float direction)
    {
         _rigidbody.velocity = new Vector2(direction * _moveSpeed, _rigidbody.velocity.y);
-        SoundManager.instance.PlaySound(walkingSound);
 
 
         if (direction != 0) anim.SetBool("run", true);

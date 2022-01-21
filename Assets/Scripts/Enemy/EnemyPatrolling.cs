@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyPatrolling : MonoBehaviour
 {
+    
     [Header("Patrol Points")]
     [SerializeField] private Transform leftEdge;
     [SerializeField] private Transform rightEdge;
@@ -64,11 +65,13 @@ public class EnemyPatrolling : MonoBehaviour
         anim.SetBool("moving", false);
 
         idleTimer += Time.deltaTime;
-        if(idleTimer > idleDuration)
-           movingLeft = !movingLeft;
-        
-        
+        if (idleTimer > idleDuration)
+            movingLeft = !movingLeft;
+
+
     }
+
+
     private void MoveInDirection(int _direction)
     {
         idleTimer = 0;

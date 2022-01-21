@@ -108,7 +108,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 34
-        width: 32
+        width: 30
         height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -148,7 +148,7 @@ TextureImporter:
       name: zelot_sword_attac(2)_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 31
         y: 34
         width: 32
         height: 28

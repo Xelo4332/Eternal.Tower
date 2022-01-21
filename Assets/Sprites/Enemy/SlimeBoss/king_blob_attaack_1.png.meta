@@ -1,0 +1,612 @@
+fileFormatVersion: 2
+guid: d3b1303a8918a0c47af92812b51c7663
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3941145620624758030
+    second: king_blob_attaack_1_0
+  - first:
+      213: -7532593765925140338
+    second: king_blob_attaack_1_1
+  - first:
+      213: 308023821493743891
+    second: king_blob_attaack_1_2
+  - first:
+      213: 1903129558737997316
+    second: king_blob_attaack_1_3
+  - first:
+      213: 3053289943969213888
+    second: king_blob_attaack_1_4
+  - first:
+      213: -256465277601972789
+    second: king_blob_attaack_1_5
+  - first:
+      213: 7299437939437289649
+    second: king_blob_attaack_1_6
+  - first:
+      213: -4644368959439033901
+    second: king_blob_attaack_1_7
+  - first:
+      213: 4827341846409485577
+    second: king_blob_attaack_1_8
+  - first:
+      213: 7317251249049492840
+    second: king_blob_attaack_1_9
+  - first:
+      213: 6865738152076699087
+    second: king_blob_attaack_1_10
+  - first:
+      213: -2278634870664917803
+    second: king_blob_attaack_1_11
+  - first:
+      213: -3243126087824097168
+    second: king_blob_attaack_1_12
+  - first:
+      213: 6540253278215568277
+    second: king_blob_attaack_1_13
+  - first:
+      213: 215800903491703553
+    second: king_blob_attaack_1_14
+  - first:
+      213: -3802510678162735524
+    second: king_blob_attaack_1_15
+  - first:
+      213: 8298689555451312784
+    second: king_blob_attaack_1_16
+  - first:
+      213: 7014765347365403881
+    second: king_blob_attaack_1_17
+  - first:
+      213: 6572675742942970031
+    second: king_blob_attaack_1_18
+  - first:
+      213: -3400288572136383871
+    second: king_blob_attaack_1_19
+  - first:
+      213: 3614653024055093699
+    second: king_blob_attaack_1_20
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: king_blob_attaack_1_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 256
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05dc659f03c1b630800000000000000
+      internalID: 3941145620624758030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 256
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88c5b811e9d67790800000000000000
+      internalID: -7532593765925140338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 256
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3113e7e9802564400800000000000000
+      internalID: 308023821493743891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_3
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 256
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ecf1e1046496a10800000000000000
+      internalID: 1903129558737997316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_4
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 256
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdae8ae6077f5a20800000000000000
+      internalID: 3053289943969213888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 192
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcdff47503ad07cf0800000000000000
+      internalID: -256465277601972789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_6
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 192
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b04b20c120dc4560800000000000000
+      internalID: 7299437939437289649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_7
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 192
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d929cec903eb8fb0800000000000000
+      internalID: -4644368959439033901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d9d9c35d92ef240800000000000000
+      internalID: 4827341846409485577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86dd0e71e391c8560800000000000000
+      internalID: 7317251249049492840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc5e06b1970084f50800000000000000
+      internalID: 6865738152076699087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc033968a9a060e0800000000000000
+      internalID: -2278634870664917803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0704175810a1ef2d0800000000000000
+      internalID: -3243126087824097168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b7f1d64b5a3ca50800000000000000
+      internalID: 6540253278215568277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_14
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 128
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103d4d247cdaef200800000000000000
+      internalID: 215800903491703553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 64
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5efa7d4fa4ca3bc0800000000000000
+      internalID: -3802510678162735524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_16
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 64
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a7bedae2eda2370800000000000000
+      internalID: 8298689555451312784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_17
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 64
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec3f68eae3795160800000000000000
+      internalID: 7014765347365403881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_18
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 64
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa041f1c3c5d63b50800000000000000
+      internalID: 6572675742942970031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_19
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 64
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a9df32f8fbfc0d0800000000000000
+      internalID: -3400288572136383871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: king_blob_attaack_1_20
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9681d26c3d92230800000000000000
+      internalID: 3614653024055093699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

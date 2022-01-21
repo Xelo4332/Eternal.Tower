@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyMelee : MonoBehaviour
 {
+    //This Settings for Damage, ColliderDistance, Range, coldwon timer with help of mathf.Ifinity and Layer for player to TakeDamage
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
     [SerializeField] private float colliderDistance;
@@ -23,6 +24,7 @@ public class EnemyMelee : MonoBehaviour
         enemyPatrol = GetComponentInParent<EnemyPatrolling>();
     }
 
+    //Med
     private void Update()
     {
         coldownTimer += Time.deltaTime;
@@ -45,6 +47,7 @@ public class EnemyMelee : MonoBehaviour
 
     }
 
+    //Enemy har en Boxcollider där om Player kommer in denna box collider de kommer våran player börja få damage
     private bool PlayerInSight()
     {
         RaycastHit2D hit =
@@ -66,6 +69,7 @@ public class EnemyMelee : MonoBehaviour
         new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 
+    //Method för player damage
     private void DamagePlayer()
     {
 
