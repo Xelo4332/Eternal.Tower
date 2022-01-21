@@ -10,13 +10,17 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float startingHealth;
 
     //How much is current health and it's private set so only some scripts can acess it
+    
     public float currentHealth { get; private set; }
     private bool dead;
 
+    [Header ("Animations")]
     private Animator anim;
 
-    [Header ("Components")]
+    [Header("Components")]
     [SerializeField] private Behaviour[] components;
+    [SerializeField] private AudioClip enemyHit;
+    [SerializeField] private AudioClip enemyDeath;
 
     //Gets animator component and when the game start current health will get same number of health that you had it health
     private void Awake()
@@ -35,7 +39,7 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth > 0)
         {
             anim.SetTrigger("hurt");
-
+            SoundManager.instance.PlaySound(enemyHit);
 
         }
         else
@@ -46,6 +50,7 @@ public class EnemyHealth : MonoBehaviour
                 foreach (Behaviour component in components)
                 component.enabled = false;
 
+                SoundManager.instance.PlaySound(enemyDeath);
 
                 dead = true;
            }

@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 5
   _jumpForce: 20
-  walkingSound: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: 401e0e5a4a08ddc4db06d049911f2389, type: 3}
 --- !u!114 &8785424332774873281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,7 +194,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.021094598, y: -0.004573807}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0.01, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.32, y: 0.28}
     newSize: {x: 0.26, y: 0.28}

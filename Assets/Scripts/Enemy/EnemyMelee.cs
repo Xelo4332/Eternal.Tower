@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class EnemyMelee : MonoBehaviour
 {
-    //This Settings for Damage, ColliderDistance, Range, coldwon timer with help of mathf.Ifinity and Layer for player to TakeDamage
+    //This Settings for Damage, ColliderDistance, Range, coldwon timer with help of mathf.Ifinity and Layer for player to TakeDamage Deni
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
     [SerializeField] private float colliderDistance;
     [SerializeField] private int damage;
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
+
+
     private float coldownTimer = Mathf.Infinity;
 
     private Animator anim;
@@ -31,7 +33,7 @@ public class EnemyMelee : MonoBehaviour
 
         if (PlayerInSight())
         {
-            // Att fiende f�rst�r n�r ska den sl� v�ran karakt�r
+            // Att fiende f�rst�r n�r ska den sl� v�ran karakt�r Martin
             if (coldownTimer >= attackCooldown)
             {
                 coldownTimer = 0;
@@ -47,7 +49,7 @@ public class EnemyMelee : MonoBehaviour
 
     }
 
-    //Enemy har en Boxcollider där om Player kommer in denna box collider de kommer våran player börja få damage
+    //Enemy har en Boxcollider där om Player kommer in denna box collider de kommer våran player börja få damage Deni
     private bool PlayerInSight()
     {
         RaycastHit2D hit =
@@ -61,6 +63,7 @@ public class EnemyMelee : MonoBehaviour
         return hit.collider != null;
     }
 
+    //Draws a gizmo to show where's Enemy Collider hitting point
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

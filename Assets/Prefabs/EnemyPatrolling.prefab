@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1426021053988159669, guid: b74bfe2665ef6284784df7a970e96910, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -165,6 +165,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 3
+  components:
+  - {fileID: 4081990288052361351}
+  - {fileID: 4081990289016557249}
+  enemyHit: {fileID: 8300000, guid: 1370715e849cfad4db00ecc181e53fa4, type: 3}
+  enemyDeath: {fileID: 8300000, guid: e2637e2d8f8c2a44caefd48a022fcc2e, type: 3}
 --- !u!1 &4081990288576157364
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,5 +280,5 @@ MonoBehaviour:
   rightEdge: {fileID: 4081990288576157371}
   enemy: {fileID: 4081990288052361344}
   speed: 5
-  idleDuration: 3
+  idleDuration: 2
   anim: {fileID: 4081990288052361347}

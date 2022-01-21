@@ -79,7 +79,7 @@ MonoBehaviour:
   leftEdge: {fileID: 2070159189016032994}
   rightEdge: {fileID: 2070159187400801695}
   enemy: {fileID: 2070159188545458206}
-  speed: 4
+  speed: 10
   idleDuration: 0
   anim: {fileID: 2070159188545458203}
 --- !u!1 &2070159188545458196
@@ -157,7 +157,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -128341457985692718, guid: 66fa33f1a25354b47bfaedec35588778, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -250,6 +250,8 @@ MonoBehaviour:
   components:
   - {fileID: 2070159188505774618}
   - {fileID: 2070159188545458201}
+  enemyHit: {fileID: 8300000, guid: 1370715e849cfad4db00ecc181e53fa4, type: 3}
+  enemyDeath: {fileID: 8300000, guid: e2637e2d8f8c2a44caefd48a022fcc2e, type: 3}
 --- !u!1 &2070159189016032995
 GameObject:
   m_ObjectHideFlags: 0

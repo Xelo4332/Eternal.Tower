@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Denna script är exact samma som Enemyhealth men skillnaden är att det är för player
 public class Health : MonoBehaviour
 {
     [Header ("Health")]

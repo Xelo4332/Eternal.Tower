@@ -30,12 +30,12 @@ public class EnemyPatrolling : MonoBehaviour
     {
         initScale = enemy.localScale;
     }
-
+    
     private void OnDisable()
     {
         anim.SetBool("moving", false);
     }
-
+    //Denna script är för om enemy kommer till en av edge posions som är x då kommer enemy byta holl Kacper
     private void Update()
     {
         if (movingLeft)
@@ -59,7 +59,8 @@ public class EnemyPatrolling : MonoBehaviour
 
         }
     }
-
+   
+    //Om det händer method DirectionChange då kommer moving animation bli false och idleTimer börja Kacper
     private void DirectionChange()
     {
         anim.SetBool("moving", false);
@@ -71,7 +72,7 @@ public class EnemyPatrolling : MonoBehaviour
 
     }
 
-
+   //Den här script är för att enemy skulle kunna röra sig och animations trigger kommer vara true.
     private void MoveInDirection(int _direction)
     {
         idleTimer = 0;
