@@ -674,7 +674,10 @@ MonoBehaviour:
 
     X = parry
 
-    W = Jump'
+    (3 sec cooldown)
+
+    W
+    = Jump'
 --- !u!222 &1950299785
 CanvasRenderer:
   m_ObjectHideFlags: 0
