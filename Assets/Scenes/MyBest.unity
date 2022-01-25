@@ -32414,8 +32414,8 @@ Transform:
   - {fileID: 1102408067}
   - {fileID: 1655805819}
   - {fileID: 34706123}
-  - {fileID: 1316119736474036995}
   - {fileID: 1106976791}
+  - {fileID: 1316119736474036995}
   - {fileID: 718736153}
   - {fileID: 428633276}
   - {fileID: 109754227}
@@ -35583,6 +35583,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8785424332774873287, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
+      propertyPath: cooldownTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8785424332774873305, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
       propertyPath: m_Name
       value: Player
