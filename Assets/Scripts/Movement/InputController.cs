@@ -24,12 +24,6 @@ public class InputController : MonoBehaviour
     {
         _horizontal = Input.GetAxis("Horizontal");
         _playerMovement.Move(_horizontal);
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            _playerMovement.Jump();
-        }
-        
         
         //Rotarar våran karaktär Kacper
         if (Input.GetKeyDown(KeyCode.D))

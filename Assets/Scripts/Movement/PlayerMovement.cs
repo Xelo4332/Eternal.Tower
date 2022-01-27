@@ -14,6 +14,12 @@ public class PlayerMovement : MonoBehaviour
    private Animator anim;
    private SpriteRenderer _spriteRenderer;
    [SerializeField] private AudioClip jumpSound;
+   [SerializeField] private float _checkRadius;
+   [SerializeField] private Transform _groundChecker;
+   [SerializeField] private LayerMask _groundLayer;
+   private bool isJump;
+   private int jumpIteration;
+   [SerializeField] private int jumpIterationCount;
 
 
 
@@ -39,34 +45,50 @@ public class PlayerMovement : MonoBehaviour
         if (direction != 0) anim.SetBool("run", true);
         else anim.SetBool("run", false);
    }
-    
-   //We creating a jump method for our player and bool so we can check if player collide with ground Deni
-   public void Jump()
-   {
-       if (_isGround)
-       {
-           _rigidbody.velocity = Vector2.up * _jumpForce;
-       }
+
+    //We creating a jump method for our player and bool so we can check if player collide with ground Deni
+    private void Jump()
+    {
+        if (Input.GetKey(KeyCode.W))
+        {
+            if (_isGround)
+            {
+                isJump = true;
+            }
+            
+        }
+        else
+        {
+            isJump = false;
+        }
+
+        if (isJump)
+        {
+            if (jumpIteration++ < jumpIterationCount)
+            {
+                _rigidbody.AddForce(Vector2.up * _jumpForce / jumpIteration);
+
+            }
+        }
+        else
+        {
+            jumpIteration = 0;
+        }
         SoundManager.instance.PlaySound(jumpSound);
 
     }
 
     //If player collide with ground, then jump method activates Deni
-       private void OnCollisionEnter2D(Collision2D collision)
+    private void CheckingGround()
     {
-        if (collision.gameObject.tag == "Ground")
-        {
-            _isGround = true;
-        }
+        _isGround = Physics2D.OverlapCircle(_groundChecker.position, _checkRadius, _groundLayer);
     }
 
-    //If not player does not collide with ground the he can't jump Deni
-     private void OnCollisionExit2D(Collision2D collision)
+    private void Update()
     {
-        if (collision.gameObject.tag == "Ground")
-        {
-            _isGround = false;
-        }
+        CheckingGround();
+        Jump();
     }
-   
+
 }
+   
