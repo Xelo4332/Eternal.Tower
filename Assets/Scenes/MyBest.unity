@@ -15778,7 +15778,7 @@ GameObject:
   - component: {fileID: 615823284}
   - component: {fileID: 615823286}
   - component: {fileID: 615823285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: green_tile_thing-1.png_1 (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -19450,7 +19450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 734616060}
   - component: {fileID: 734616061}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: final_casteal_big_fin-1.png
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31866,7 +31866,7 @@ GameObject:
   - component: {fileID: 1229439457}
   - component: {fileID: 1229439459}
   - component: {fileID: 1229439458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: green_tile_thing-1.png_1 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -31976,7 +31976,7 @@ GameObject:
   - component: {fileID: 1232313545}
   - component: {fileID: 1232313547}
   - component: {fileID: 1232313546}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: green_tile_thing-1.png_1 (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -57010,6 +57010,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: green_tile_thing-1.png_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4166751746903574189, guid: 70a765fcbf1b5584ebaf9443a4dd86ec, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70a765fcbf1b5584ebaf9443a4dd86ec, type: 3}
 --- !u!1001 &6758947558907745770
@@ -57277,7 +57281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8785424332774873286, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
       propertyPath: _jumpForce
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 8785424332774873286, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
       propertyPath: _checkRadius
@@ -57294,6 +57298,10 @@ PrefabInstance:
     - target: {fileID: 8785424332774873286, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
       propertyPath: _groundLayer.m_Bits
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785424332774873287, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
+      propertyPath: cooldownTime
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8785424332774873305, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
       propertyPath: m_Name
