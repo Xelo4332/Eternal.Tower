@@ -19,6 +19,21 @@ public class InputController : MonoBehaviour
         
     }
 
+
+    private void FixedUpdate()
+    {
+        if (Time.time > nextAttack)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                print("COOLDOWN STARTED");
+                _combatController.Attack();
+                anim.SetTrigger("MeleeAttack");
+                SoundManager.instance.PlaySound(meleeAttackSound);
+                nextAttack = Time.time + cooldownTime;
+            }
+        }
+    }
     //Det är för alla keybinds för movement, attack, parry och jump och några animationer ligger här
     private void Update()
     {
@@ -37,20 +52,5 @@ public class InputController : MonoBehaviour
     }
 
 
-
-    private void FixedUpdate()
-    {
-        if (Time.time > nextAttack)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                print("COOLDOWN STARTED");
-                _combatController.Attack();
-                anim.SetTrigger("MeleeAttack");
-                SoundManager.instance.PlaySound(meleeAttackSound);
-                nextAttack = Time.time + cooldownTime;
-            }
-        }
-    }
 
 }
