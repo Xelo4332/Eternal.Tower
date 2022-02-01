@@ -2441,8 +2441,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.015139148, y: -0.034249432}
-  m_Size: {x: 0.17972171, y: 0.25581464}
+  m_Offset: {x: 0.015139148, y: -0.022848772}
+  m_Size: {x: 0.17972171, y: 0.23301332}
   m_Direction: 0
 --- !u!4 &100182125 stripped
 Transform:
@@ -57326,7 +57326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8785424332774873287, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
       propertyPath: cooldownTime
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8785424332774873305, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
       propertyPath: m_Name
