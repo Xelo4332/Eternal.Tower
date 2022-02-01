@@ -68,7 +68,7 @@ public class CombatController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             StartCoroutine(Parry());
         }
