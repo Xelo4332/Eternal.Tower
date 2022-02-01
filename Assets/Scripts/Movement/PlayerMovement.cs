@@ -13,13 +13,14 @@ public class PlayerMovement : MonoBehaviour
    [SerializeField] private float _jumpForce;
    private Animator anim;
    private SpriteRenderer _spriteRenderer;
-   [SerializeField] private AudioClip jumpSound;
    [SerializeField] private float _checkRadius;
    [SerializeField] private Transform _groundChecker;
    [SerializeField] private LayerMask _groundLayer;
    private bool isJump;
    private int jumpIteration;
    [SerializeField] private int jumpIterationCount;
+
+   
 
 
 
@@ -74,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpIteration = 0;
         }
-        SoundManager.instance.PlaySound(jumpSound);
+       
 
     }
 

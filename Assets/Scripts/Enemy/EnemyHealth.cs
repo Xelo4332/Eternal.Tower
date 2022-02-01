@@ -10,12 +10,15 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float startingHealth;
 
     //How much is current health and it's private set so only some scripts can acess it 
-    
+
     //Denna variablar är för kunna kolla Hur mycket har player health under spelet och har bool död att kunna kolla om player eller enemy är död
     public float currentHealth { get; private set; }
     private bool dead;
+    [SerializeField] private float iFramesDuration;
+    [SerializeField] private int numberOfFlashes;
+    private SpriteRenderer spriteRend;
 
-    [Header ("Animations")]
+    [Header("Animations")]
     private Animator anim;
 
     //Två audioclippar och Bevhiour så att kunna stänga alla componenets när spelet är slut
@@ -29,6 +32,7 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
+        spriteRend = GetComponent<SpriteRenderer>();
     }
 
     //If enemy will take damage then hurt aniamtion will activate and enemy will lose health. If health = 0 or dead then all components will be turned off
@@ -46,17 +50,17 @@ public class EnemyHealth : MonoBehaviour
         }
         else
         {
-           if (!dead)
-           {
-               anim.SetTrigger("die");
+            if (!dead)
+            {
+                anim.SetTrigger("die");
                 foreach (Behaviour component in components)
-                component.enabled = false;
+                    component.enabled = false;
 
                 SoundManager.instance.PlaySound(enemyDeath);
 
                 dead = true;
-           }
-            
+            }
+
 
         }
 
@@ -71,5 +75,18 @@ public class EnemyHealth : MonoBehaviour
             TakeDamage(1);
         }
     }
+
+    private IEnumerator Invunerability()
+    {
+
+        for (int i = 0; i < numberOfFlashes; i++)
+        {
+            spriteRend.color = new Color(1, 0, 0, 0.5f);
+            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+            spriteRend.color = Color.white;
+            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+        }
+
+    }
 }
-   
+

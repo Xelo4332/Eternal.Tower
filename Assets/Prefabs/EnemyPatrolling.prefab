@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 2
-  range: 1.84
-  colliderDistance: 0.07
+  range: 1.5
+  colliderDistance: 0.05
   damage: 1
   boxCollider: {fileID: 4081990288052361346}
   playerLayer:
@@ -165,6 +165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 3
+  iFramesDuration: 2
+  numberOfFlashes: 3
   components:
   - {fileID: 4081990288052361351}
   - {fileID: 4081990289016557249}
