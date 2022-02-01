@@ -774,7 +774,7 @@ GameObject:
   - component: {fileID: 17016765}
   - component: {fileID: 17016764}
   - component: {fileID: 17016766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: green_tile_thing-1.png_1
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2423,6 +2423,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4216795268077922393, guid: 8d9886ca4064fa242907b011c9969d30, type: 3}
   m_PrefabInstance: {fileID: 2032517924}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &99523501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8785424332774873305, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
+  m_PrefabInstance: {fileID: 8785424333458406164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &99523509
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99523501}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 8433cc5b795da794db191070751002bd, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015139148, y: -0.034249432}
+  m_Size: {x: 0.17972171, y: 0.25581464}
+  m_Direction: 0
 --- !u!4 &100182125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4216795268077922393, guid: 8d9886ca4064fa242907b011c9969d30, type: 3}
@@ -17459,7 +17480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656301650}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.94, y: -1.4553013, z: 3.8780863}
+  m_LocalPosition: {x: 7.26, y: -1.4553013, z: 3.8780863}
   m_LocalScale: {x: 4.5593, y: 3.3031, z: 1}
   m_Children: []
   m_Father: {fileID: 5187446}
@@ -35208,7 +35229,7 @@ GameObject:
   - component: {fileID: 1335485197}
   - component: {fileID: 1335485199}
   - component: {fileID: 1335485198}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: green_tile_thing-1.png_1 (31)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -53949,7 +53970,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8785424332774873282, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
   m_PrefabInstance: {fileID: 8785424333458406164}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 99523501}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5e5d9c56e4b7da428ab28a931c62f0c, type: 3}
@@ -57264,6 +57285,10 @@ PrefabInstance:
       value: 0.2713874
       objectReference: {fileID: 0}
     - target: {fileID: 8785424332774873284, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785424332774873284, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 8433cc5b795da794db191070751002bd, type: 2}
@@ -57293,7 +57318,7 @@ PrefabInstance:
       objectReference: {fileID: 1793776846}
     - target: {fileID: 8785424332774873286, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
       propertyPath: jumpIterationCount
-      value: 1000
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 8785424332774873286, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
       propertyPath: _groundLayer.m_Bits
