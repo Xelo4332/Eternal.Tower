@@ -90,6 +90,10 @@ public class PlayerMovement : MonoBehaviour
         CheckingGround();
         Jump();
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+    }
 
 }
    
