@@ -19,7 +19,7 @@ public class Health : MonoBehaviour
     [SerializeField] private int numberOfFlashes;
     private SpriteRenderer spriteRend;
     CombatController controller;
-
+    
     private void Awake()
     {
         controller = GetComponent<CombatController>();
