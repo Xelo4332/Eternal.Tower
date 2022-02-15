@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2070159188505774619}
   - component: {fileID: 2070159188505774618}
+  - component: {fileID: 5809094837032783128}
   m_Layer: 11
   m_Name: SlimeBossPatrol
   m_TagString: Untagged
@@ -82,6 +83,18 @@ MonoBehaviour:
   speed: 10
   idleDuration: 0
   anim: {fileID: 2070159188545458203}
+--- !u!114 &5809094837032783128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070159188505774612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718818a38e786ac4099be1b158610093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2070159188545458196
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,6 +260,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 10
+  dead: 0
+  iFramesDuration: 0
+  numberOfFlashes: 0
   components:
   - {fileID: 2070159188505774618}
   - {fileID: 2070159188545458201}
