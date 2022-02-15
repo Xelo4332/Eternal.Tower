@@ -9,43 +9,43 @@ public class PlayerMovement : MonoBehaviour
 {
     //I de här fielder vi kan ändra hastighet rörlse på player och hur långt han hoppar
     //Field för 
-   [SerializeField] private float _moveSpeed;
-   [SerializeField] private float _jumpForce;
-   private Animator anim;
-   private SpriteRenderer _spriteRenderer;
-   [SerializeField] private float _checkRadius;
-   [SerializeField] private Transform _groundChecker;
-   [SerializeField] private LayerMask _groundLayer;
-   private bool isJump;
-   private int jumpIteration;
-   [SerializeField] private int jumpIterationCount;
+    [SerializeField] private float _moveSpeed;
+    [SerializeField] private float _jumpForce;
+    private Animator anim;
+    private SpriteRenderer _spriteRenderer;
+    [SerializeField] private float _checkRadius;
+    [SerializeField] private Transform _groundChecker;
+    [SerializeField] private LayerMask _groundLayer;
+    private bool isJump;
+    private int jumpIteration;
+    [SerializeField] private int jumpIterationCount;
 
-   
+
 
 
 
     private bool _isGround;
-   
-   private Rigidbody2D _rigidbody;
 
-  //Tar up rigid body, animator, sprite renderer componenter så vi kan använda de i denna script Kacper;
-   private void Start()
-   {
-       _rigidbody = GetComponent<Rigidbody2D>();
-       anim = GetComponent<Animator>();
-       _spriteRenderer = GetComponent<SpriteRenderer>();
+    private Rigidbody2D _rigidbody;
 
-   }
+    //Tar up rigid body, animator, sprite renderer componenter så vi kan använda de i denna script Kacper;
+    private void Start()
+    {
+        _rigidbody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+
+    }
 
     //Vi gör att player skulle kunna röra sig med hjälp av velociry Kacper
-   public void Move(float direction)
-   {
+    public void Move(float direction)
+    {
         _rigidbody.velocity = new Vector2(direction * _moveSpeed, _rigidbody.velocity.y);
 
 
         if (direction != 0) anim.SetBool("run", true);
         else anim.SetBool("run", false);
-   }
+    }
 
     //We creating a jump method for our player and bool so we can check if player collide with ground Deni
     private void Jump()
@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 isJump = true;
             }
-            
+
         }
         else
         {
@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpIteration = 0;
         }
-       
+
 
     }
 
@@ -90,9 +90,18 @@ public class PlayerMovement : MonoBehaviour
         CheckingGround();
         Jump();
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    public void Turn(float moveDirection)
     {
-        
+        if (moveDirection > 0)
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
+        }
+        if (moveDirection < 0)
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 180, transform.rotation.z);
+        }
+
     }
 
 }

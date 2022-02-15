@@ -11,12 +11,12 @@ public class InputController : MonoBehaviour
     [SerializeField] private AudioClip meleeAttackSound;
     private float _horizontal;
     private Animator anim;
-    [SerializeField]public float cooldownTime = 1;
+    [SerializeField] public float cooldownTime = 1;
     private float nextAttack = 0;
     private void Start()
     {
         anim = GetComponent<Animator>();
-        
+
     }
 
 
@@ -39,18 +39,24 @@ public class InputController : MonoBehaviour
     {
         _horizontal = Input.GetAxis("Horizontal");
         _playerMovement.Move(_horizontal);
-        
+        _playerMovement.Turn(_horizontal);
+
         //Rotarar våran karaktär Kacper
-        if (Input.GetKeyDown(KeyCode.D))
+        
+    }
+
+    public void Turn(float moveDirection)
+    {
+        if (moveDirection > 0)
         {
             transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (moveDirection < 0)
         {
             transform.rotation = Quaternion.Euler(transform.rotation.x, 180, transform.rotation.z);
         }
+           
     }
-
 
 
 }

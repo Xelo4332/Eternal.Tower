@@ -5,19 +5,34 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-	public float timeStart = 60;
-	public Text textBox;
+    private Health _playerHealth;
+    [SerializeField] private Text _timerLabel;
+    private int _time;
 
-	// Use this for initialization
-	void Start()
-	{
-		textBox.text = timeStart.ToString();
-	}
+    private void Start()
+    {
+        _playerHealth = FindObjectOfType<Health>();
+        _playerHealth.PlayerIsDead += Save;
+        StartCoroutine(Tick());
+    }
 
-	// Update is called once per frame
-	void Update()
-	{
-		timeStart += Time.deltaTime;
-		textBox.text = Mathf.Round(timeStart).ToString();
-	}
+    private IEnumerator Tick()
+    {
+        while (true)
+        {
+            _time++;
+            yield return new WaitForSeconds(1);
+            _timerLabel.text = _time.ToString();
+        }
+    }
+
+    private void Save()
+    {
+        PlayerPrefs.SetInt("record", _time);
+    }
+
+    private void OnDestroy()
+    {
+        _playerHealth.PlayerIsDead -= Save;
+    }
 }

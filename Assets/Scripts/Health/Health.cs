@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//Denna script är exact samma som Enemyhealth men skillnaden är att det är för player
-//Men skillanden är att det finns Parry och andra små detaljer
 public class Health : MonoBehaviour
 {
-    [Header ("Health")]
+
+    public event System.Action PlayerIsDead;
+    [Header("Health")]
 
     [SerializeField] private float startingHealth;
 
     public float currentHealth { get; private set; }
     private bool dead;
 
-    [Header ("iFrames")]
+    [Header("iFrames")]
     [SerializeField] private float iFramesDuration;
     [SerializeField] private int numberOfFlashes;
     private SpriteRenderer spriteRend;
     CombatController controller;
-    
+
+
     private void Awake()
     {
         controller = GetComponent<CombatController>();
@@ -27,7 +28,6 @@ public class Health : MonoBehaviour
 
         spriteRend = GetComponent<SpriteRenderer>();
     }
-    //Om parry = falkst då kommer player ta damage Deni
     public void TakeDamage(float _damage)
     {
         if (controller.isParry == false)
@@ -40,17 +40,26 @@ public class Health : MonoBehaviour
                 StartCoroutine(Invunerability());
 
             }
-            else 
+            else
             {
                 if (!dead)
                 {
+                    PlayerIsDead?.Invoke();
+
+                    DDOL[] ddols = FindObjectsOfType<DDOL>();
+                    foreach (DDOL ddol in ddols)
+                    {
+                        Destroy(ddol.gameObject);
+                    }
+
+
                     SceneManager.LoadScene("GameOver");
                 }
 
 
             }
         }
-        
+
     }
 
     private void Update()
@@ -61,18 +70,17 @@ public class Health : MonoBehaviour
         }
     }
 
-    //Bytter ut färger på player till rött i några sekunder Martin
     private IEnumerator Invunerability()
     {
-        
+        Physics2D.IgnoreLayerCollision(10, 11, true);
         for (int i = 0; i < numberOfFlashes; i++)
         {
             spriteRend.color = new Color(1, 0, 0, 0.5f);
             yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
-            spriteRend.color = Color.white; 
+            spriteRend.color = Color.white;
             yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
         }
-        
+        Physics2D.IgnoreLayerCollision(10, 11, false);
     }
 
 }
