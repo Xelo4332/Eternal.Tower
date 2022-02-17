@@ -6694,6 +6694,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8785424332774873281, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
+      propertyPath: _attackDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8785424332774873286, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
       propertyPath: _jumpForce
       value: 350
@@ -6714,13 +6718,21 @@ PrefabInstance:
       propertyPath: _groundLayer.m_Bits
       value: 256
       objectReference: {fileID: 0}
+    - target: {fileID: 8785424332774873287, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
+      propertyPath: cooldownTime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8785424332774873305, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8785424332774873305, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8785424332774873307, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8785424332774873307, guid: 6bb1a1142ceb6e440b605fe9ff27e4df, type: 3}
       propertyPath: m_LocalPosition.x

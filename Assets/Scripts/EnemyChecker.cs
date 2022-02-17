@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class EnemyChecker : MonoBehaviour
 {
-    GameObject[] enemies;
+    EnemyHealth[] enemies;
+    private Health _health;
     // Start is called before the first frame update
     void Start()
     {
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        enemies = GameObject.FindObjectsOfType<EnemyHealth>();
     }
 
     // Update is called once per frame
@@ -25,11 +26,13 @@ public class EnemyChecker : MonoBehaviour
     {
         for (int i = 0; i < enemies.Length; i++)
         {
-            if (enemies[i] != null)
+            if (enemies[i].dead == false)
             {
                 return false;
             }
         }
         return true;
     }
+
+   
 }

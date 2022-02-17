@@ -13,13 +13,14 @@ public class EnemyHealth : MonoBehaviour
 
     //Denna variablar är för kunna kolla Hur mycket har player health under spelet och har bool död att kunna kolla om player eller enemy är död
     public float currentHealth { get; private set; }
-    private bool dead;
+    public bool dead;
     [SerializeField] private float iFramesDuration;
     [SerializeField] private int numberOfFlashes;
     private SpriteRenderer spriteRend;
 
     [Header("Animations")]
     private Animator anim;
+
 
     //Två audioclippar och Bevhiour så att kunna stänga alla componenets när spelet är slut
     [Header("Components")]
@@ -45,6 +46,7 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth > 0)
         {
             anim.SetTrigger("hurt");
+            StartCoroutine(Invunerability());
             SoundManager.instance.PlaySound(enemyHit);
 
         }
@@ -57,6 +59,9 @@ public class EnemyHealth : MonoBehaviour
                     component.enabled = false;
 
                 SoundManager.instance.PlaySound(enemyDeath);
+
+    
+                
 
                 dead = true;
             }
@@ -76,6 +81,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    
     private IEnumerator Invunerability()
     {
 
