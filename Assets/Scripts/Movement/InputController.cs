@@ -4,12 +4,13 @@ using UnityEngine;
 
 
 public class InputController : MonoBehaviour
-{
+{//Kacper
 
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private CombatController _combatController;
-   
+
     private float _horizontal;
+    
 
 
 

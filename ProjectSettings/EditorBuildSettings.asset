@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CaveFight.unity
     guid: 21433a9af3016bb4da8bfa0605f32c99
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 39985fcbbe9c0ab429b919f086ef7414
   m_configObjects: {}

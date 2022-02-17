@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
+    //Kacper
     private Transform _player;
     
+    //Hittar player object 
 
     void Start()
     {

@@ -91,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
         Jump();
     }
 
+    //Changing direction moveDriction if it's more then 1 or lower Deni
     public void Turn(float moveDirection)
     {
         Vector2 turnDirection = transform.localScale;

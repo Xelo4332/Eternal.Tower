@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class RecordLabel : MonoBehaviour
 {
+    //Deni
     [SerializeField] private Text _recordLabel;
-
+     
+    //Saves record with help int funktion
     private void Start()
     {
         int record = PlayerPrefs.GetInt("record");
