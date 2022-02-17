@@ -91,17 +91,20 @@ public class PlayerMovement : MonoBehaviour
         Jump();
     }
 
+    //Changing direction moveDriction if it's more then 1 or lower Deni
     public void Turn(float moveDirection)
     {
+        Vector2 turnDirection = transform.localScale;
+
         if (moveDirection > 0)
         {
-            transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
+            turnDirection = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
         if (moveDirection < 0)
         {
-            transform.rotation = Quaternion.Euler(transform.rotation.x, 180, transform.rotation.z);
+            turnDirection = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
-
+        transform.localScale = turnDirection;
     }
 
 }
