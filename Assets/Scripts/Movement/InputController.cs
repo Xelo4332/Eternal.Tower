@@ -8,43 +8,32 @@ public class InputController : MonoBehaviour
 
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private CombatController _combatController;
-    [SerializeField] private AudioClip meleeAttackSound;
+   
     private float _horizontal;
-    private Animator anim;
-    [SerializeField] public float cooldownTime = 1;
-    private float nextAttack = 0;
-    private void Start()
-    {
-        anim = GetComponent<Animator>();
-
-    }
 
 
-    private void FixedUpdate()
-    {
-        if (Time.time > nextAttack)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                print("COOLDOWN STARTED");
-                _combatController.Attack();
-                anim.SetTrigger("MeleeAttack");
-                SoundManager.instance.PlaySound(meleeAttackSound);
-                nextAttack = Time.time + cooldownTime;
-            }
-        }
-    }
-    //Det är för alla keybinds för movement, attack, parry och jump och några animationer ligger här
+
+
+    //This method is for movement to activate Attack, Move and Turn
     private void Update()
     {
         _horizontal = Input.GetAxis("Horizontal");
         _playerMovement.Move(_horizontal);
         _playerMovement.Turn(_horizontal);
 
-        //Rotarar våran karaktär Kacper
-        
-    }
+  
+            
+     
+       if (Input.GetKeyDown(KeyCode.Space))
+       {
+     
+                _combatController.Attack();
 
+                
+       }
+    }
+    
+    //Changing player direction if Movedirection is bigger then 0 or not
     public void Turn(float moveDirection)
     {
         if (moveDirection > 0)

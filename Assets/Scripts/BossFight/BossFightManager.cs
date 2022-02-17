@@ -7,7 +7,7 @@ public class BossFightManager : MonoBehaviour
     [SerializeField] private Vector3 _playerStartPosition;
     private void Start()
     {
-
+        SetPlayerPosition();
     }
 
     private void SetPlayerPosition()

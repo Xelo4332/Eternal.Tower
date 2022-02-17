@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2799203232941441025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.014, y: -0.141, z: 0}
+  m_LocalPosition: {x: 0.0162, y: -0.141, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8785424332774873307}
@@ -47,7 +47,9 @@ GameObject:
   - component: {fileID: 8785424332774873282}
   - component: {fileID: 8785424332774873280}
   - component: {fileID: 4588263944712009077}
-  m_Layer: 10
+  - component: {fileID: 7527739130969265017}
+  - component: {fileID: 1408978517}
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -110,7 +112,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -6278235051351990635, guid: 4af04c023652dc5498135e101497c0cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -157,8 +159,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerMovement: {fileID: 8785424332774873286}
   _combatController: {fileID: 8785424332774873281}
-  meleeAttackSound: {fileID: 8300000, guid: c669a8c2c7c934a4dbdc15c913ec921a, type: 3}
-  cooldownTime: 1
 --- !u!114 &8785424332774873286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,13 +172,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 5
-  _jumpForce: 20
-  _checkRadius: 0
-  _groundChecker: {fileID: 0}
+  _jumpForce: 250
+  _checkRadius: 0.1
+  _groundChecker: {fileID: 3496749098280424144}
   _groundLayer:
     serializedVersion: 2
-    m_Bits: 0
-  jumpIterationCount: 0
+    m_Bits: 256
+  jumpIterationCount: 500
 --- !u!114 &8785424332774873281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,14 +192,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isParry: 0
+  cooldownTime: 1
   _enemyLayer:
     serializedVersion: 2
     m_Bits: 2048
   _attackPoint: {fileID: 8785424333418492747}
   _attackRange: 0.54
-  _attackDamage: 1
+  _attackDamage: 10
   _hitBox: {fileID: 0}
   _spriteRenderer: {fileID: 8785424332774873306}
+  meleeAttackSound: {fileID: 8300000, guid: c669a8c2c7c934a4dbdc15c913ec921a, type: 3}
 --- !u!114 &8785424332774873282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,6 +252,32 @@ CapsuleCollider2D:
   m_Offset: {x: 0.011919551, y: -0.0062225345}
   m_Size: {x: 0.18037029, y: 0.27365118}
   m_Direction: 0
+--- !u!114 &7527739130969265017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8785424332774873305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82917900b88ad44ea95ab2bc2229333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1408978517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8785424332774873305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d84f7885d7b987641bf3e69ff44518c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashCooldown: 1
+  dashForce: 15
 --- !u!1 &8785424333418492746
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,23 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class EnemyChecker : MonoBehaviour
 {
+    //Skappar array och health variable 
     EnemyHealth[] enemies;
     private Health _health;
-    // Start is called before the first frame update
     void Start()
     {
         enemies = GameObject.FindObjectsOfType<EnemyHealth>();
     }
 
-    // Update is called once per frame
+    //Om alla enemies lika med deadm då kommer loada andra scene Deni
     void Update()
     {
         if (checkEnemies())
         {
-            SceneManager.LoadScene("MainM");
+            SceneManager.LoadScene("CaveFight");
         }
     }
 
+    //Kollar om alla enemis är lika med dead Deni
     bool checkEnemies()
     {
         for (int i = 0; i < enemies.Length; i++)
