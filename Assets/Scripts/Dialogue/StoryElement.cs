@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StoryElement : MonoBehaviour
 {
+    //Sherzad
     public Dialogue dialogue;
 
     //Startar TriggerDialogue metoden

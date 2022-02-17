@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+//Deni
     //We are creating three variables for Health component, timer and time
     private Health _playerHealth;
     [SerializeField] private Text _timerLabel;

@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DDOL : MonoBehaviour
+    //Deni
 {
-    // Start is called before the first frame update
+    
+    //Does not destroying Object
     void Start()
     {
         DontDestroyOnLoad(gameObject);

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Deni
+
 public class EnemyChecker : MonoBehaviour
 {
     //Skappar array och health variable 

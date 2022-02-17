@@ -47,7 +47,7 @@ public class CombatController : MonoBehaviour
         isCooldown = true;
         StartCoroutine(Cooldown());
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayer); //  Makes a empty circle and dameges all things with the layer "enemyLayer"-KK
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayer); //  Makes a empty circle and dameges all things with the layer Julian
 
         foreach (Collider2D enemy in hitEnemies)
         {
@@ -76,7 +76,7 @@ public class CombatController : MonoBehaviour
         
     }
 
-    //Layer mask changes so you become invisble to attacks in some seconds Deni
+    //Layer mask changes so you become invisble to attacks in some seconds Martin
     private IEnumerator Parry()
     {
         isParry = true;
