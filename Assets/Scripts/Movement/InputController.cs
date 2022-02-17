@@ -34,18 +34,18 @@ public class InputController : MonoBehaviour
             }
         }
     }
-    //Det är för alla keybinds för movement, attack, parry och jump och några animationer ligger här
+    
     private void Update()
-    {
+    {//Det är för alla keybinds för movement, attack, parry och jump och några animationer ligger här
         _horizontal = Input.GetAxis("Horizontal");
         _playerMovement.Move(_horizontal);
         _playerMovement.Turn(_horizontal);
 
-        //Rotarar våran karaktär Kacper
+        
         
     }
 
-    public void Turn(float moveDirection)
+    public void Turn(float moveDirection) //Rotarar våran karaktär Kacper
     {
         if (moveDirection > 0)
         {

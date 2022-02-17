@@ -25,20 +25,20 @@ public class CombatController : MonoBehaviour
     private Coroutine _parryRoutine;
     private Animator anim;
 
-    //Gets Animator component so we can use animator
+    //Gets Animator component so we can use animator -deni
     private void Start()
     {
         anim = GetComponent<Animator>();
     }
 
-    //If Enemy is in attack point and you will press shift then it will activate TakeDamage method Kacper
+    //If Enemy is in attack point and you will press shift then it will activate TakeDamage method -Kacper
     public void Attack()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayer); //  Makes a empty circle and dameges all things with the layer "enemyLayer"-KK
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayer); //  Makes a empty circle and dameges all things with the layer "_enemyLayer" that are in it-Kacper
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            EnemyAttack?.Invoke(_attackDamage); //Send Event
+            EnemyAttack?.Invoke(_attackDamage); 
             enemy.GetComponent<EnemyHealth>().TakeDamage(_attackDamage);
 
             print("hejd�");
@@ -46,7 +46,7 @@ public class CombatController : MonoBehaviour
 
     }
 
-    //Layer mask changes so you become invisble to attacks in some seconds Deni
+    //Layer mask changes so you become invisble to attacks in some seconds -Deni
     private IEnumerator Parry()
     {
         isParry = true;
@@ -64,7 +64,7 @@ public class CombatController : MonoBehaviour
 
     }
 
-    //Input for parry Deni
+    //Input for parry -Deni
 
     private void Update()
     {
@@ -74,8 +74,8 @@ public class CombatController : MonoBehaviour
         }
     }
         
-        //Will draw Attack point Gizmo and you will able to see it Kacper
-        private void OnDrawGizmosSelected()// shows the empty circle that is the attack range-KK
+        //Will draw Attack point Gizmo and you will able to see it in the "scene" -Kacper
+        private void OnDrawGizmosSelected()// shows the  circle that is the attack range-Kacper
         {
             if (_attackPoint == null)
                 return;

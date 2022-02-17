@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D _rigidbody;
 
-    //Tar up rigid body, animator, sprite renderer componenter så vi kan använda de i denna script Kacper;
+    //Tar up rigid body, animator, sprite renderer componenter så vi kan använda de i denna script -Kacper;
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    //Vi gör att player skulle kunna röra sig med hjälp av velociry Kacper
+    // gör att player skulle kunna röra sig med hjälp av velociry -Kacper
     public void Move(float direction)
     {
         _rigidbody.velocity = new Vector2(direction * _moveSpeed, _rigidbody.velocity.y);
@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         else anim.SetBool("run", false);
     }
 
-    //We creating a jump method for our player and bool so we can check if player collide with ground Deni
+    //We creating a jump method for our player and bool so we can check if player collide with ground -Deni
     private void Jump()
     {
         if (Input.GetKey(KeyCode.W))
@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    //If player collide with ground, then jump method activates Deni
+    //If player collide with ground, then jump method activates -Deni
     private void CheckingGround()
     {
         _isGround = Physics2D.OverlapCircle(_groundChecker.position, _checkRadius, _groundLayer);
