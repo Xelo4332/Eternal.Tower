@@ -8,7 +8,7 @@ public class StartingTheGame : MonoBehaviour
     //Changing scene Julian
     public void ChangeScene()
     {
-        SceneManager.LoadScene("Intro");
+        SceneManager.LoadScene("MyBest");
     }
 }
 

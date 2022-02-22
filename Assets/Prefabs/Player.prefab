@@ -199,7 +199,7 @@ MonoBehaviour:
     m_Bits: 2048
   _attackPoint: {fileID: 8785424333418492747}
   _attackRange: 0.54
-  _attackDamage: 10
+  _attackDamage: 1
   _hitBox: {fileID: 0}
   _spriteRenderer: {fileID: 8785424332774873306}
 --- !u!114 &8785424332774873282
