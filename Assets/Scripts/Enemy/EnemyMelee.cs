@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMelee : MonoBehaviour
 {
-    //This Settings for Damage, ColliderDistance, Range, coldwon timer with help of mathf.Ifinity and Layer for player to TakeDamage Deni
+    //This Settings for Damage, ColliderDistance, Range, coldwon timer with help of mathf.Ifinity and Layer for player to TakeDamage -Deni
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
     [SerializeField] private float colliderDistance;
@@ -26,14 +26,14 @@ public class EnemyMelee : MonoBehaviour
         enemyPatrol = GetComponentInParent<EnemyPatrolling>();
     }
 
-    //Plussar ihop ColdownTimer med deltaima Martin
+    //Plussar ihop ColdownTimer med deltaima -Martin
     private void Update()
     {
         coldownTimer += Time.deltaTime;
 
         if (PlayerInSight())
         {
-            // Att fiende f�rst�r n�r ska den sl� v�ran karakt�r Martin
+            // Att fiende f�rst�r n�r ska den sl� v�ran karakt�r -Martin
             if (coldownTimer >= attackCooldown)
             {
                 coldownTimer = 0;
@@ -42,7 +42,7 @@ public class EnemyMelee : MonoBehaviour
             }
         }
         
-        //Om Enemy Patrol är lika med Null då aktiveras PlayerInSight methoden Martin
+        //Om Enemy Patrol är lika med Null då aktiveras PlayerInSight methoden -Martin
         if(enemyPatrol != null)
         {
             enemyPatrol.enabled = !PlayerInSight();
@@ -50,7 +50,7 @@ public class EnemyMelee : MonoBehaviour
 
     }
 
-    //Enemy har en Boxcollider där om Player kommer in denna box collider de kommer våran player börja få damage Deni
+    //Enemy har en Boxcollider där om Player kommer in denna box collider de kommer våran player börja få damage -Deni
     private bool PlayerInSight()
     {
         RaycastHit2D hit =
@@ -64,7 +64,7 @@ public class EnemyMelee : MonoBehaviour
         return hit.collider != null;
     }
 
-    //Draws a gizmo to show where's Enemy Collider hitting point Julian
+    //Draws a gizmo to show where's Enemy Collider hitting point -Julian
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

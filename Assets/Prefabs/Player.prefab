@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 4588263944712009077}
   - component: {fileID: 7527739130969265017}
   - component: {fileID: 1408978517}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -159,6 +159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerMovement: {fileID: 8785424332774873286}
   _combatController: {fileID: 8785424332774873281}
+  meleeAttackSound: {fileID: 0}
+  cooldownTime: 1
 --- !u!114 &8785424332774873286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,16 +194,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isParry: 0
-  cooldownTime: 1
   _enemyLayer:
     serializedVersion: 2
     m_Bits: 2048
   _attackPoint: {fileID: 8785424333418492747}
   _attackRange: 0.54
-  _attackDamage: 10
+  _attackDamage: 1
   _hitBox: {fileID: 0}
   _spriteRenderer: {fileID: 8785424332774873306}
-  meleeAttackSound: {fileID: 8300000, guid: c669a8c2c7c934a4dbdc15c913ec921a, type: 3}
 --- !u!114 &8785424332774873282
 MonoBehaviour:
   m_ObjectHideFlags: 0

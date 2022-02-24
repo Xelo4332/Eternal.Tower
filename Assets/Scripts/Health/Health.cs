@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Kacper
 public class Health : MonoBehaviour
 {
 
@@ -28,6 +29,7 @@ public class Health : MonoBehaviour
 
         spriteRend = GetComponent<SpriteRenderer>();
     }
+    //This method is for if player will take damage when hurt animation will play, if it's dead bool true then scene will load
     public void TakeDamage(float _damage)
     {
         if (controller.isParry == false)
@@ -62,6 +64,7 @@ public class Health : MonoBehaviour
 
     }
 
+    //Takedamage method
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -69,7 +72,7 @@ public class Health : MonoBehaviour
             TakeDamage(1);
         }
     }
-
+    //Iframes so if enemy will get damage then it will change sprite colour Deni
     private IEnumerator Invunerability()
     {
         Physics2D.IgnoreLayerCollision(10, 11, true);

@@ -41,7 +41,7 @@ public class EnemyPatrolling : MonoBehaviour
     {
         anim.SetBool("moving", false);
     }
-    //Denna script är för om enemy kommer till en av edge posions som är x då kommer enemy byta holl Kacper
+    //Denna script är för om enemy kommer till en av edge posions som är x då kommer enemy byta holl 
     private void Update()
     {
         if (movingLeft)
@@ -66,7 +66,7 @@ public class EnemyPatrolling : MonoBehaviour
         }
     }
    
-    //Om det händer method DirectionChange då kommer moving animation bli false och idleTimer börja Kacper
+    //Om det händer method DirectionChange då kommer moving animation bli false och idleTimer börja 
     private void DirectionChange()
     {
         anim.SetBool("moving", false);
