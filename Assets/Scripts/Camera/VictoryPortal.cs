@@ -13,7 +13,7 @@ public class VictoryPortal : MonoBehaviour
     {
         if (ChangeScene.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("BossScene");
+            SceneManager.LoadScene("GameOver");
         }
     }
 
